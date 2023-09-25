@@ -4,16 +4,22 @@ return {
   -- example of importing a plugin, comment out to use it or add your own
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
   -- { import = "astrocommunity.colorscheme.catppuccin" },
-  -- { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.completion.copilot-lua-cmp" },
 
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.dart" },
+  { import = "astrocommunity.pack.zig" },
+  -- { import = "astrocommunity.pack.cpp" },
   {
     "akinsho/flutter-tools.nvim",
     opts = {
       debugger = {
         enabled = true,
         run_via_dap = true,
+        register_configurations = function(_)
+          require("dap").configurations.dart = {}
+          require("dap.ext.vscode").load_launchjs()
+        end
       },
       widget_guides = {
         enabled = true,
