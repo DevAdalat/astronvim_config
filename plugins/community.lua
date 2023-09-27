@@ -9,13 +9,14 @@ return {
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.dart" },
   { import = "astrocommunity.pack.zig" },
-  -- { import = "astrocommunity.pack.cpp" },
+  { import = "astrocommunity.color.ccc-nvim"},
+  { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   {
     "akinsho/flutter-tools.nvim",
     opts = {
       debugger = {
         enabled = true,
-        run_via_dap = true,
+        run_via_dap = false,
         register_configurations = function(_)
           require("dap").configurations.dart = {}
           require("dap.ext.vscode").load_launchjs()
