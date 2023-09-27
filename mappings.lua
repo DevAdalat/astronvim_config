@@ -13,12 +13,21 @@ return {
       function() require('telescope').extensions.flutter.commands() end,
       desc = "Flutter Commands",
     },
+
     -- H = {
     --   function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
     --   desc = "Previous buffer",
     -- },
 
     -- mappings seen under group name "Buffer"
+
+    ['<leader>zn'] = {
+      function()
+        require("notify").dismiss()
+      end,
+      desc = "Dismiss Notification",
+    },
+
     ["<leader>bD"] = {
       function()
         require("astronvim.utils.status").heirline.buffer_picker(
