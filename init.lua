@@ -70,6 +70,9 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
+    vim.opt.list = true
+    vim.opt.listchars:append "space:⋅"
+    vim.opt.listchars:append "eol:↴"
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
