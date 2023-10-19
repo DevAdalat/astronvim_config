@@ -24,7 +24,10 @@ return {
 
     ['<leader>zn'] = {
       function()
-        require("notify").dismiss()
+        require("notify").dismiss({
+          pending = true,
+          silent = true,
+        })
       end,
       desc = "Dismiss Notification",
     },
