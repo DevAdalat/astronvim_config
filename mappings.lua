@@ -20,6 +20,7 @@ return {
     -- },
 
     -- mappings seen under group name "Buffer"
+    ["r"] = { [[:%s/\V<C-r>/ /gc<left><left><left>]], desc = "Replace with Prompted Text" },
 
     ['<leader>zn'] = {
       function()
