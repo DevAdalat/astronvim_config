@@ -18,7 +18,7 @@ return {
   },
 
   -- Set colorscheme to use
-  colorscheme = "astromars",
+  colorscheme = "tokyonight-night",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
@@ -52,6 +52,7 @@ return {
     servers = {
       -- "pyright"
       -- "clangd"
+      "ccls"
     },
   },
 
