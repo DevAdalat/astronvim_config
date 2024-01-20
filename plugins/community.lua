@@ -4,7 +4,7 @@ return {
   -- example of importing a plugin, comment out to use it or add your own
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
   { import = "astrocommunity.completion.copilot-lua-cmp" },
-  { import = "astrocommunity.colorscheme.tokyonight-nvim" },
+  { import = "astrocommunity.colorscheme.kanagawa-nvim" },
   { import = "astrocommunity.editing-support.multicursors-nvim" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.dart" },
@@ -19,7 +19,7 @@ return {
       },
       debugger = {
         enabled = true,
-        run_via_dap = false,
+        run_via_dap = true,
         register_configurations = function(_)
           require("dap").configurations.dart = {
             {
